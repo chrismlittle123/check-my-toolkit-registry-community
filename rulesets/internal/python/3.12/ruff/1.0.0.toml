@@ -1,0 +1,10 @@
+# Ruff configuration for Python 3.12 - INTERNAL
+# Moderate rules for internal tools and services
+
+[rulesets.ruff]
+target-version = "py312"
+line-length = 100
+
+[rulesets.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]

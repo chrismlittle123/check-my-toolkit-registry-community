@@ -1,24 +1,108 @@
 {
   "schema_version": "1.0.0",
   "rulesets": {
-    "python/3.12/ruff": {
-      "description": "Python 3.12 ruff configuration - pyupgrade, bugbear, simplify, type-checking rules",
+    "prototype/python/3.12": {
+      "tier": "prototype",
+      "description": "Python 3.12 ruff configuration - relaxed rules for rapid prototyping",
       "tool": "ruff",
       "format": "toml",
       "target_version": "py312",
       "versions": {
-        "1.0.0": { "file": "python/3.12/ruff/1.0.0.toml" },
+        "1.0.0": { "file": "prototype/python/3.12/ruff/1.0.0.toml" },
         "latest": "1.0.0"
       }
     },
-    "typescript/5.5/eslint": {
-      "description": "TypeScript 5.5 / Node.js 20 ESLint configuration - strict type safety and modern ES features",
+    "prototype/typescript/5.5/eslint": {
+      "tier": "prototype",
+      "description": "TypeScript 5.5 / Node.js 20 ESLint configuration - relaxed rules for rapid prototyping",
       "tool": "eslint",
       "format": "toml",
       "language_version": "5.5",
       "runtime_version": "node20",
       "versions": {
-        "1.0.0": { "file": "typescript/5.5/eslint/1.0.0.toml" },
+        "1.0.0": { "file": "prototype/typescript/5.5/eslint/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "prototype/typescript/5.5/tsc": {
+      "tier": "prototype",
+      "description": "TypeScript 5.5 tsconfig - relaxed type checking for rapid prototyping",
+      "tool": "tsc",
+      "format": "toml",
+      "language_version": "5.5",
+      "runtime_version": "node20",
+      "versions": {
+        "1.0.0": { "file": "prototype/typescript/5.5/tsc/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "internal/python/3.12": {
+      "tier": "internal",
+      "description": "Python 3.12 ruff configuration - moderate rules for internal tools and services",
+      "tool": "ruff",
+      "format": "toml",
+      "target_version": "py312",
+      "versions": {
+        "1.0.0": { "file": "internal/python/3.12/ruff/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "internal/typescript/5.5/eslint": {
+      "tier": "internal",
+      "description": "TypeScript 5.5 / Node.js 20 ESLint configuration - moderate rules for internal tools and services",
+      "tool": "eslint",
+      "format": "toml",
+      "language_version": "5.5",
+      "runtime_version": "node20",
+      "versions": {
+        "1.0.0": { "file": "internal/typescript/5.5/eslint/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "internal/typescript/5.5/tsc": {
+      "tier": "internal",
+      "description": "TypeScript 5.5 tsconfig - moderate type checking for internal tools and services",
+      "tool": "tsc",
+      "format": "toml",
+      "language_version": "5.5",
+      "runtime_version": "node20",
+      "versions": {
+        "1.0.0": { "file": "internal/typescript/5.5/tsc/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "production/python/3.12": {
+      "tier": "production",
+      "description": "Python 3.12 ruff configuration - strict rules for production-grade code",
+      "tool": "ruff",
+      "format": "toml",
+      "target_version": "py312",
+      "versions": {
+        "1.0.0": { "file": "production/python/3.12/ruff/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "production/typescript/5.5/eslint": {
+      "tier": "production",
+      "description": "TypeScript 5.5 / Node.js 20 ESLint configuration - strict rules for production-grade code",
+      "tool": "eslint",
+      "format": "toml",
+      "language_version": "5.5",
+      "runtime_version": "node20",
+      "versions": {
+        "1.0.0": { "file": "production/typescript/5.5/eslint/1.0.0.toml" },
+        "latest": "1.0.0"
+      }
+    },
+    "production/typescript/5.5/tsc": {
+      "tier": "production",
+      "description": "TypeScript 5.5 tsconfig - strict type checking for production-grade code",
+      "tool": "tsc",
+      "format": "toml",
+      "language_version": "5.5",
+      "runtime_version": "node20",
+      "versions": {
+        "1.0.0": { "file": "production/typescript/5.5/tsc/1.0.0.toml" },
         "latest": "1.0.0"
       }
     }

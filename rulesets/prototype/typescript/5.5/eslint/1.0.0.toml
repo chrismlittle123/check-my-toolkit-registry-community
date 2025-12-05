@@ -1,0 +1,8 @@
+# ESLint configuration for TypeScript 5.5 / Node.js 20 - PROTOTYPE
+# Relaxed rules for rapid prototyping and experimentation
+
+[rulesets.eslint.rules]
+"no-var" = "error"
+"prefer-const" = "warn"
+"eqeqeq" = "warn"
+"no-duplicate-imports" = "warn"

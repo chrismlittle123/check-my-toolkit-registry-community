@@ -1,0 +1,5 @@
+# TypeScript compiler configuration - INTERNAL
+# Moderate type checking for internal tools and services
+
+[rulesets.tsc]
+strict = true

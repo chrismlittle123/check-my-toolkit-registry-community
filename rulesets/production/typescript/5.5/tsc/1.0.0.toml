@@ -1,0 +1,21 @@
+# TypeScript compiler configuration - PRODUCTION
+# Strict type checking for production-grade code
+
+[rulesets.tsc]
+strict = true
+noUncheckedIndexedAccess = true
+exactOptionalPropertyTypes = true
+noImplicitReturns = true
+noFallthroughCasesInSwitch = true
+noUnusedLocals = true
+noUnusedParameters = true
+noPropertyAccessFromIndexSignature = true
+forceConsistentCasingInFileNames = true
+verbatimModuleSyntax = true
+isolatedModules = true
+esModuleInterop = true
+skipLibCheck = true
+resolveJsonModule = true
+declaration = true
+declarationMap = true
+sourceMap = true

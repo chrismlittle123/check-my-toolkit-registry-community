@@ -1,0 +1,13 @@
+# ESLint configuration for TypeScript 5.5 / Node.js 20 - INTERNAL
+# Moderate rules for internal tools and services
+
+[rulesets.eslint.rules]
+"no-var" = "error"
+"prefer-const" = "error"
+"eqeqeq" = "error"
+"no-throw-literal" = "error"
+"no-duplicate-imports" = "error"
+"prefer-arrow-callback" = "warn"
+"prefer-template" = "warn"
+"@typescript-eslint/no-explicit-any" = "warn"
+"@typescript-eslint/explicit-function-return-type" = "warn"

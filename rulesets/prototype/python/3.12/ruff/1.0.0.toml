@@ -1,0 +1,10 @@
+# Ruff configuration for Python 3.12 - PROTOTYPE
+# Relaxed rules for rapid prototyping and experimentation
+
+[rulesets.ruff]
+target-version = "py312"
+line-length = 120
+
+[rulesets.ruff.lint]
+select = ["E", "F"]
+ignore = ["E501", "E402", "F401", "F841"]

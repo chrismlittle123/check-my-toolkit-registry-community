@@ -1,0 +1,5 @@
+# TypeScript compiler configuration - PROTOTYPE
+# Relaxed type checking for rapid prototyping
+
+[rulesets.tsc]
+strict = false

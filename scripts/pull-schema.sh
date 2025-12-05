@@ -6,7 +6,7 @@
 set -e
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SCHEMA_URL="https://raw.githubusercontent.com/chrismlittle123/check-my-code/main/schema.json"
+SCHEMA_URL="https://raw.githubusercontent.com/chrismlittle123/check-my-code/main/schemas/cmc.schema.json"
 OUTPUT_FILE="$REPO_ROOT/schema.json"
 
 echo "Pulling schema.json from check-my-code repo..."
