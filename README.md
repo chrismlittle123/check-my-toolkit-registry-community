@@ -1,54 +1,53 @@
-# Check My Toolkit Registry - Community
+# check-my-toolkit Registry
 
-A community registry of coding standards, linting rulesets, and prompts for consistent development practices across projects.
+Community standards for [check-my-toolkit](https://github.com/chrismlittle123/check-my-toolkit).
 
 ## Structure
 
 ```
-├── code/
-│   └── rulesets/          # Linting configurations
-│       ├── prototype/     # Relaxed rules for rapid prototyping
-│       ├── internal/      # Moderate rules for internal tools
-│       └── production/    # Strict rules for production code
-└── stack/
-    └── prompts/           # Coding standards for AI assistants
-        ├── prototype/     # Relaxed guidelines
-        ├── internal/      # Moderate guidelines
-        └── production/    # Strict guidelines
+├── prompts/           # Coding guidelines (markdown)
+│   ├── python-prototype.md
+│   ├── python-internal.md
+│   ├── python-production.md
+│   ├── typescript-prototype.md
+│   ├── typescript-internal.md
+│   └── typescript-production.md
+│
+├── rulesets/          # check.toml configs
+│   ├── python-prototype.toml
+│   ├── python-internal.toml
+│   ├── python-production.toml
+│   ├── typescript-prototype.toml
+│   ├── typescript-internal.toml
+│   └── typescript-production.toml
+│
+└── README.md
 ```
 
 ## Tiers
 
-Each resource is organized into three tiers based on strictness:
+| Tier | Purpose |
+|------|---------|
+| **prototype** | Rapid prototyping, experiments |
+| **internal** | Internal tools, team projects |
+| **production** | Customer-facing, production code |
 
-| Tier | Purpose | Use Case |
-|------|---------|----------|
-| **prototype** | Relaxed rules | Rapid prototyping, experiments, POCs |
-| **internal** | Moderate rules | Internal tools, services, team projects |
-| **production** | Strict rules | Customer-facing, production-grade code |
+## Prompts
 
-## Supported Languages
+Markdown coding standards for humans and AI assistants.
 
-### Python 3.12
-- **Rulesets**: ruff configurations
-- **Prompts**: Coding standards
+## Rulesets
 
-### TypeScript 5.5
-- **Rulesets**: ESLint and tsc configurations (Node.js 20)
-- **Prompts**: Coding standards
+`check.toml` configurations for check-my-toolkit. Copy or reference these in your project.
 
-## Usage
-
-Resources are versioned and referenced via manifest files:
-- `code/rulesets/rulesets.json` - Ruleset manifest
-- `stack/prompts/prompts.json` - Prompts manifest
-
-Each manifest includes version tracking with a `latest` pointer for easy reference.
+Example `check.toml`:
+```toml
+# Copy the contents of rulesets/python-production.toml
+# or use extends when supported:
+# [extends]
+# base = "github:chrismlittle123/check-my-toolkit-registry-community/rulesets/python-production.toml"
+```
 
 ## Contributing
 
-When adding new resources:
-1. Follow the existing directory structure: `{tier}/{language}/{version}/`
-2. Use semantic versioning for new versions
-3. Update the corresponding manifest file
-4. Ensure file names use kebab-case
+Add new standards following the `{language}-{tier}` naming convention.

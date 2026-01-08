@@ -1,0 +1,20 @@
+# TypeScript - Production
+# Strict checks for production-grade code
+
+[code.linting.eslint]
+enabled = true
+
+[code.types.tsc]
+enabled = true
+
+[code.unused.knip]
+enabled = true
+
+[code.tests]
+enabled = true
+
+[code.security.secrets]
+enabled = true
+
+[code.security.npmaudit]
+enabled = true

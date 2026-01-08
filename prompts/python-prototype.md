@@ -1,43 +1,37 @@
-## Python 3.12 Coding Standards - PROTOTYPE
+# Python Coding Standards - Prototype
 
 Guidelines for rapid prototyping and experimentation. Focus on speed over polish.
 
-### Target Version
-
-- Target Python 3.12 specifically.
-- Use Python 3.12 features where appropriate.
-
-### Security
+## Security
 
 - Never commit secrets, API keys, or credentials to files. Use environment variables.
 
-### Tooling
+## Tooling
 
-- Use `uv` for all package management and virtual environments.
+- Use `uv` for package management and virtual environments.
 - Use `pyproject.toml` for project configuration.
-- Use `uv venv` to create virtual environments.
-- Use `uv python` to manage Python versions.
+- Use `ruff` for linting.
 
-### Dependencies
+## Dependencies
 
 - Pin versions loosely in `pyproject.toml` (e.g., `requests>=2.28`).
 - Lockfile (`uv.lock`) is optional for prototypes.
 
-### Imports
+## Imports
 
 - Remove obviously unused imports.
 - Import organization is flexible during prototyping.
 
-### Types
+## Types
 
 - Type hints are optional but encouraged for public APIs.
 
-### Error Handling
+## Error Handling
 
 - Catch exceptions at main entry points to provide useful error messages.
 - Let unexpected errors propagate with full stack traces for debugging.
 - Use context managers for resource management (files, connections).
 
-### Testing
+## Testing
 
 - Testing is optional for prototypes.

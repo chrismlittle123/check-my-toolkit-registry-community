@@ -1,0 +1,11 @@
+# TypeScript - Internal
+# Moderate checks for internal tools and services
+
+[code.linting.eslint]
+enabled = true
+
+[code.types.tsc]
+enabled = true
+
+[code.unused.knip]
+enabled = true
