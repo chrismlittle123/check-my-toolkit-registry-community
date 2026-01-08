@@ -3,9 +3,24 @@
 
 [code.linting.eslint]
 enabled = true
+files = ["src/**/*.ts", "src/**/*.tsx", "**/*.ts", "**/*.tsx"]
+ignore = ["**/dist/**", "**/node_modules/**", "**/coverage/**"]
+max-warnings = 0
 
 [code.types.tsc]
 enabled = true
+
+[code.types.tsc.require]
+strict = true
+noImplicitAny = true
+strictNullChecks = true
+noUnusedLocals = true
+noUnusedParameters = true
+noImplicitReturns = true
+noFallthroughCasesInSwitch = true
+esModuleInterop = true
+skipLibCheck = true
+forceConsistentCasingInFileNames = true
 
 [code.unused.knip]
 enabled = true

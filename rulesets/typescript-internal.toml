@@ -3,9 +3,21 @@
 
 [code.linting.eslint]
 enabled = true
+files = ["src/**/*.ts", "src/**/*.tsx"]
+ignore = ["**/*.test.ts", "**/*.spec.ts", "**/dist/**", "**/node_modules/**"]
+max-warnings = 10
 
 [code.types.tsc]
 enabled = true
+
+[code.types.tsc.require]
+strict = false
+noImplicitAny = true
+strictNullChecks = true
+noUnusedLocals = false
+noUnusedParameters = false
+noImplicitReturns = true
+esModuleInterop = true
 
 [code.unused.knip]
 enabled = true
