@@ -3,8 +3,7 @@
 
 [code.linting.eslint]
 enabled = true
-files = ["src/**/*.ts", "src/**/*.tsx"]
-ignore = ["**/*.test.ts", "**/*.spec.ts", "**/dist/**", "**/node_modules/**"]
+ignore = ["**/dist/**", "**/node_modules/**", "**/build/**"]
 max-warnings = 10
 
 [code.linting.eslint.rules]
