@@ -1,30 +1,71 @@
 # TypeScript - Production
 # Strict checks for production-grade code
 
+# =============================================================================
+# ESLint
+# =============================================================================
+
 [code.linting.eslint]
 enabled = true
-ignore = ["**/dist/**", "**/node_modules/**", "**/coverage/**", "**/build/**"]
+ignore = ["**/dist/**", "**/node_modules/**", "**/build/**"]
 max-warnings = 0
 
 [code.linting.eslint.rules]
-"@typescript-eslint/no-unused-vars" = "error"
-"@typescript-eslint/no-explicit-any" = "error"
-"@typescript-eslint/explicit-function-return-type" = "error"
-"@typescript-eslint/no-non-null-assertion" = "error"
-"@typescript-eslint/no-floating-promises" = "error"
-"@typescript-eslint/no-misused-promises" = "error"
-"@typescript-eslint/await-thenable" = "error"
-"@typescript-eslint/no-unsafe-assignment" = "error"
-"@typescript-eslint/no-unsafe-call" = "error"
-"@typescript-eslint/no-unsafe-member-access" = "error"
-"@typescript-eslint/no-unsafe-return" = "error"
-"no-console" = "error"
+
+# Code quality limits
+"max-depth" = { severity = "error", max = 4 }
+"max-params" = { severity = "error", max = 4 }
+"max-lines-per-function" = "error"
+"max-lines" = "error"
+"complexity" = "error"
+"no-console" = { severity = "error", allow = ["error", "warn"] }
+
+# Core ESLint - Best practices
 "eqeqeq" = "error"
 "curly" = "error"
 "prefer-const" = "error"
 "no-var" = "error"
+
+# Core ESLint - Security
 "no-eval" = "error"
 "no-implied-eval" = "error"
+
+# Core ESLint - Bug prevention
+"array-callback-return" = "error"
+"no-template-curly-in-string" = "error"
+"consistent-return" = "error"
+
+# Import plugin
+"import/no-cycle" = { severity = "error", maxDepth = 10 }
+
+# TypeScript-ESLint - Type safety
+"@typescript-eslint/no-unused-vars" = "error"
+"@typescript-eslint/no-explicit-any" = "error"
+"@typescript-eslint/no-non-null-assertion" = "error"
+"@typescript-eslint/no-unnecessary-condition" = "error"
+"@typescript-eslint/no-unsafe-assignment" = "error"
+"@typescript-eslint/no-unsafe-call" = "error"
+"@typescript-eslint/no-unsafe-member-access" = "error"
+"@typescript-eslint/no-unsafe-return" = "error"
+
+# TypeScript-ESLint - Async/Promise safety
+"@typescript-eslint/no-floating-promises" = "error"
+"@typescript-eslint/no-misused-promises" = "error"
+"@typescript-eslint/await-thenable" = "error"
+
+# TypeScript-ESLint - Exhaustiveness
+"@typescript-eslint/switch-exhaustiveness-check" = "error"
+
+# =============================================================================
+# Formatting
+# =============================================================================
+
+[code.formatting.prettier]
+enabled = true
+
+# =============================================================================
+# TypeScript Compiler
+# =============================================================================
 
 [code.types.tsc]
 enabled = true
@@ -34,18 +75,24 @@ strict = true
 noImplicitAny = true
 strictNullChecks = true
 noUnusedLocals = true
-noUnusedParameters = true
 noImplicitReturns = true
 noFallthroughCasesInSwitch = true
 esModuleInterop = true
 skipLibCheck = true
 forceConsistentCasingInFileNames = true
 
-[code.unused.knip]
-enabled = true
+# =============================================================================
+# Tests
+# =============================================================================
 
 [code.tests]
 enabled = true
+pattern = "**/*.test.ts"
+min_test_files = 1
+
+# =============================================================================
+# Security
+# =============================================================================
 
 [code.security.secrets]
 enabled = true
@@ -53,7 +100,17 @@ enabled = true
 [code.security.npmaudit]
 enabled = true
 
-# Naming conventions
+# =============================================================================
+# Dead Code Detection
+# =============================================================================
+
+[code.unused.knip]
+enabled = true
+
+# =============================================================================
+# Naming Conventions
+# =============================================================================
+
 [code.naming]
 enabled = true
 
