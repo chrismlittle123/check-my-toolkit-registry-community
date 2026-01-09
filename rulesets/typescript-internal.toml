@@ -18,6 +18,9 @@ max-warnings = 0
 "no-var" = "error"
 "no-eval" = "error"
 "no-implied-eval" = "error"
+"max-lines-per-function" = ["error", { max = 50, skipBlankLines = true, skipComments = true }]
+"max-lines" = ["error", { max = 300, skipBlankLines = true, skipComments = true }]
+"complexity" = ["error", { max = 10 }]
 
 [code.types.tsc]
 enabled = true
