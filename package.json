@@ -1,0 +1,25 @@
+{
+  "name": "check-my-toolkit-registry-community",
+  "version": "1.0.0",
+  "description": "Community standards for [check-my-toolkit](https://github.com/chrismlittle123/check-my-toolkit).",
+  "main": "index.js",
+  "scripts": {
+    "validate": "cm validate registry",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrismlittle123/check-my-toolkit-registry-community.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chrismlittle123/check-my-toolkit-registry-community/issues"
+  },
+  "homepage": "https://github.com/chrismlittle123/check-my-toolkit-registry-community#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
