@@ -118,3 +118,11 @@ enabled = true
 extensions = ["ts"]
 file_case = "kebab-case"
 folder_case = "kebab-case"
+
+
+# =============================================================================
+# Disable Comments Detection
+# =============================================================================
+
+[code.quality.disable-comments]
+enabled = true
