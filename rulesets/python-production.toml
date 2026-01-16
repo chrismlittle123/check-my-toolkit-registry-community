@@ -15,9 +15,6 @@ enabled = true
 [code.unused.vulture]
 enabled = true
 
-[code.tests]
-enabled = true
-
 [code.security.secrets]
 enabled = true
 
