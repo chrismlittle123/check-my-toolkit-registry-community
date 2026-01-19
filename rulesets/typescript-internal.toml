@@ -75,7 +75,7 @@ forceConsistentCasingInFileNames = true
 [code.security.secrets]
 enabled = true
 
-[code.security.npmaudit]
+[code.security.pnpmaudit]
 enabled = true
 
 # =============================================================================

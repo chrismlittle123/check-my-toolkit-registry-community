@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/chrismlittle123/check-my-toolkit-registry-community#readme",
   "devDependencies": {
+    "check-my-toolkit": "1.1.2",
     "husky": "^9.1.7"
   }
 }
