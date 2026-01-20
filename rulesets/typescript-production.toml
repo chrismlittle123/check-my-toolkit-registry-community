@@ -56,6 +56,25 @@ max-warnings = 0
 # TypeScript-ESLint - Exhaustiveness
 "@typescript-eslint/switch-exhaustiveness-check" = "error"
 
+# TypeScript-ESLint - Naming conventions
+"@typescript-eslint/naming-convention" = [
+  "error",
+  # Enum members must be UPPER_CASE
+  { selector = "enumMember", format = ["UPPER_CASE"] },
+  # Types (class, interface, typeAlias, enum, typeParameter) must be PascalCase
+  { selector = "typeLike", format = ["PascalCase"] },
+  # Variables: camelCase, UPPER_CASE (constants), or PascalCase (builder objects)
+  { selector = "variable", format = ["camelCase", "UPPER_CASE", "PascalCase"], leadingUnderscore = "allow", trailingUnderscore = "allow" },
+  # Functions must be camelCase
+  { selector = "function", format = ["camelCase"] },
+  # Parameters: camelCase, allow leading underscore for unused
+  { selector = "parameter", format = ["camelCase"], leadingUnderscore = "allow" },
+  # Class methods must be camelCase
+  { selector = "classMethod", format = ["camelCase"] },
+  # Class properties: camelCase or UPPER_CASE
+  { selector = "classProperty", format = ["camelCase", "UPPER_CASE"] },
+]
+
 # =============================================================================
 # Formatting
 # =============================================================================
