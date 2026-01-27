@@ -1,6 +1,6 @@
-# check-my-toolkit Registry
+# Standards Community Registry
 
-Community standards for [check-my-toolkit](https://github.com/chrismlittle123/check-my-toolkit).
+Community standards for [@standards-kit/conform](https://github.com/chrismlittle123/standards-kit).
 
 ## Structure
 
@@ -38,14 +38,14 @@ Markdown coding standards for humans and AI assistants.
 
 ## Rulesets
 
-`check.toml` configurations for check-my-toolkit. Copy or reference these in your project.
+`check.toml` configurations for @standards-kit/conform. Copy or reference these in your project.
 
 Example `check.toml`:
 ```toml
 # Copy the contents of rulesets/python-production.toml
 # or use extends when supported:
 # [extends]
-# base = "github:chrismlittle123/check-my-toolkit-registry-community/rulesets/python-production.toml"
+# base = "github:chrismlittle123/standards-community/rulesets/python-production.toml"
 ```
 
 ## Contributing
